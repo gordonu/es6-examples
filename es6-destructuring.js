@@ -36,23 +36,47 @@ fileSummary(savedFiled, { color: 'red'});
 
 
 //DESTRUCTURING ARRAYS
-const companies = [
-  'Google',
-  'Facebook',
-  'Uber'
-  ];
+// const companies = [
+//   'Google',
+//   'Facebook',
+//   'Uber'
+//   ];
 
 //ES5
-const firstCompany = companies[0]
-console.log(firstCompany)
+// const firstCompany = companies[0]
+// console.log(firstCompany)
   
 //ES6
 // const [ name, name2, name3, name4 ] = companies;
 // console.log(name, name2, name3, name4)
 
 //With rest operator
-const [ name, name2, ...rest] = companies;
-console.log(name, rest)
+// const [ name, name2, ...rest] = companies;
+// console.log(name, rest)
+
+
+//DESTRUCTURING ARRAYS AND OBJECTS AT THE SAME TIME
+const companies = [
+  { name: 'Google', loc: 'Mountain View' },
+  { name: 'Facebook', loc: 'Menlo Park' },
+  { name: 'Uber', loc: 'San Francisco'}
+  ]
+  
+  const [{ loc }] = companies;
+  console.log(loc)
+  
+  
+  const Google = {
+    locations: ['Mountain View', 'New York', 'London']
+  };
+  
+// const { locations: [ locations ] } = Google
+const { locations: [locations] } = Google
+console.log('locations', locations)
+
+
+
+
 
   
   
