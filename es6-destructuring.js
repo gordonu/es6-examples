@@ -77,6 +77,91 @@ console.log('locations', locations)
 
 
 
+//WHEN TO USE DESTRUCTURING
+function signup({ username, password, email, dateOfBirth, city }) {
+  //create new user
+  console.log(username, password, email, dateOfBirth, city)
+}
 
+const user = {
+  username: 'myname',
+  password: 'mypassword',
+  email: 'myemail@example.com',
+  dateOfBirth: '1/1/1990',
+  city: 'New York'
+}
+
+signup(user)
+
+
+
+
+//WHEN TO USE DESTRUCTURING
+const points = [
+  [4, 5],
+  [10, 1],
+  [0, 40]
+  ];
   
+  transform = [
+    {x: 4, y: 5},
+    {x: 10, y: 1},
+    {x: 0, y: 40}
+    ];
+    
+    
+points.map(pair => {
+    const x = pair[0];
+    const y = pair[1];
+  });
   
+points.map(pair => {
+    const [x, y] = pair;
+  })
+
+
+points.map(([x, y]) => {
+  return {x: x, y: y};
+})
+
+points.map(([x, y]) => {
+  return { x, y }
+})
+
+
+
+
+
+//EXERCISE 32
+
+const profile = {
+  title: 'Engineer',
+  department: 'Engineering'
+};
+
+function isEngineer(profile) {
+  var title = profile.title;
+  var department = profile.department;
+  return title === 'Engineer' && department === 'Engineering';
+}
+
+
+
+const profile = {
+  title: 'Engineer',
+  department: 'Engineering'
+};
+
+function isEngineer(profile) {
+  var {title, department} = profile;
+  return title === 'Engineer' && department === 'Engineering';
+}
+
+
+
+//EXERCISE 33
+
+
+
+
+
